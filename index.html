@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./src/index.js" type="module"></script>
+    <title>Document</title>
+    <style>
+        p {
+            border: 1px dotted black;
+        }
+    </style>
+</head>
+
+<body>
+    <slot-element>
+        <p>Render me in a slot</p>
+    </slot-element>
+    <hr>
+
+    <slot-Element>
+        <p>Render me in a slot</p>
+        <p>Me too</p>
+        <p>Me three</p>
+    </slot-Element>
+
+    <hr>
+    <named-slot>
+        <p slot="two">iNCLUDE ME IN SLOT "TWO"</p>
+    </named-slot>
+
+    <named-slot>
+        <p slot="one">Include me in slot "one".</p>
+        <p slot="npe">This one will not render at all</p>
+        <p>No default slot, so this one wont render aither</p>
+    </named-slot>
+
+    <hr>
+
+    <default-root></default-root>
+    <light-doom></light-doom>
+</body>
+
+</html>
